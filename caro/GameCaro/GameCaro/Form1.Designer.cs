@@ -32,7 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.Avatar = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.connect = new System.Windows.Forms.Button();
             this.txbIP = new System.Windows.Forms.TextBox();
             this.Mark = new System.Windows.Forms.PictureBox();
@@ -45,6 +44,7 @@
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             this.panel1.SuspendLayout();
@@ -74,7 +74,7 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.connect);
             this.panel1.Controls.Add(this.txbIP);
             this.panel1.Controls.Add(this.Mark);
@@ -84,16 +84,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(337, 322);
             this.panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Elephant", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 202);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 41);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "5 in a line to win";
             // 
             // connect
             // 
@@ -167,7 +157,7 @@
             this.undoToolStripMenuItem,
             this.quitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(73, 29);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // newGameToolStripMenuItem
@@ -193,6 +183,18 @@
             this.quitToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(14, 156);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(318, 152);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Đỏ đi trước, xanh đi sau.\r\nBên nào có 5 quân cùng \r\nmàu xếp thành hàng ngang,\r\nhà" +
+    "ng dọc, đường chéo\r\ntrước thì thắng.\r\n";
             // 
             // Form1
             // 
@@ -226,7 +228,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox Avatar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button connect;
         private System.Windows.Forms.TextBox txbIP;
         private System.Windows.Forms.PictureBox Mark;
@@ -239,6 +240,7 @@
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
     }
 }
 

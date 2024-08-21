@@ -109,6 +109,8 @@ namespace GameCaro
         private void undoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Undo();
+            socket.Send(new SocketData((int)SocketCommand.UNDO, "", new Point()));
+            ChessBoard.Enabled = true;
         }
 
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -205,8 +207,11 @@ namespace GameCaro
                     break;
                     
                 case (int)SocketCommand.UNDO:
-                    Undo();
-                    CoolDown.Value = 0;
+                    this.Invoke((MethodInvoker)(() =>
+                    {
+                        Undo();
+                        CoolDown.Value = 0;
+                    }));
                     break;
                 case (int)SocketCommand.END_GAME:
                     MessageBox.Show("Đã 5 quân trên một hàng!");
@@ -223,5 +228,7 @@ namespace GameCaro
             }
             Listen();
         }
+
+        
     }
 }
